@@ -1,7 +1,7 @@
 {
-  "name": "T Plus 2",
+  "name": "TextSearch",
   "version": "0.1.0",
-  "author": "Avinash Maurya",
+  "author": "Treaknite",
   "description": "Onclick quick dictionary",
   "main": "main.js",
   "scripts": {
