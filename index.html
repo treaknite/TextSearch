@@ -2,8 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+
+    <title>TextSearch</title>
 </head>
 <body style="background: white;">
     <h1>Hello World!</h1>
@@ -12,5 +16,8 @@
         Chromium <span id="chrome-version"></span>,
         and Electron <span id="electron-version"></span>.
     </p>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
 </body>
 </html>

@@ -2,9 +2,12 @@
   "name": "TextSearch",
   "version": "0.1.0",
   "author": "Treaknite",
-  "description": "Onclick quick dictionary",
+  "description": "A cross-platform on-click quick dictionary",
   "main": "main.js",
   "scripts": {
-      "start": "electron ."
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^14.0.1"
   }
 }
