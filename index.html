@@ -7,15 +7,79 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
 
+    <!-- Title of app -->
     <title>TextSearch</title>
+
+    <!-- Favicon -->
+
+    <!-- Stlyesheet link -->
+    <link rel="stylesheet" href="./styles.css">
 </head>
-<body style="background: white;">
-    <h1>Hello World!</h1>
-    <p>
-        We are using Node.js <span id="node-version"></span>,
-        Chromium <span id="chrome-version"></span>,
-        and Electron <span id="electron-version"></span>.
-    </p>
+<body>
+    <!-- Main element of app -->
+    <main id="main-section">
+        <!-- App logo -->
+        <img id="app-logo" src="" alt="app-logo">
+        <!-- Top heading of app -->
+        <h1 id="app-heading">Text Search</h1>
+        <!-- Subheading of app -->
+        <h3 id="app-subheading">A cross-platform on-click dictionary.</h3>
+
+        <!-- Form to search for word -->
+        <form id="search-form" action="">
+            <!-- Word Search input element -->
+            <input type="text" name="search-box" id="word-search" placeholder="Type a word">
+
+            <!-- Search button -->
+            <input type="button" value="Search" id="submit-button">
+        </form>
+    </main>
+
+    <!-- Container for output results -->
+    <div id="result-container">
+        <!-- Container for word and their phonetics -->
+        <div id="word-phonetics-container">
+
+            <!-- Name of searched word -->
+            <h3 id="searched-word"></h3>
+            
+            <!-- Elements for word's phonetics -->
+            <div id="phonetics-of-word">
+                <!-- Elements for phonetics -->
+                <span id="phonetics-text"></span>
+                <!-- Audio of phonetics -->
+                <audio id="phonetics-audio" src=""></audio>
+            </div>
+
+            <!-- Origin of word -->
+            <p id="origin-of-word"></p>
+        </div>
+
+        <!-- Container for meanings and parts-of-speech of word -->
+        <div id="meaning-container">
+            <!-- Parts-of-speech of word -->
+            <div id="parts-of-speech">
+                <!-- Name of parts-of-speech -->
+                <span id="name-parts-of-speech"></span>
+                
+                <!-- Section for multiple definition in parts-of-speech -->
+                <!-- As each parts-of-speech can have multiple definitions, examples, synonyms, antonyms -->
+                <div id="definitions-section">
+                    <!-- Definition of word in part-of-speech -->
+                    <p id="definition-parts-of-speech"></p>
+                    <!-- Example of word in parts-of-speech -->
+                    <p id="example-parts-of-speech"></p>
+                    <!-- Synonyms of word in parts-of-speech -->
+                    <p id="synonyms-parts-of-speech"></p>
+                    <!-- Antonyms of word in parts-of-speech -->
+                    <p id="antonyms-parts-of-speech"></p>
+                </div>
+            </div>
+    
+        </div>
+
+    </div>
+
 
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
