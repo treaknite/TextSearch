@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <!-- Meta elements -->
     <meta charset="UTF-8">
     
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title of app -->
     <title>TextSearch</title>
 
-    <!-- Favicon -->
+    <!-- Favicon for all browser -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#22577a">
+    <meta name="msapplication-TileColor" content="#22577a">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Stlyesheet link -->
     <link rel="stylesheet" href="./styles.css">
@@ -18,21 +29,24 @@
 <body>
     <!-- Main element of app -->
     <main id="main-section">
-        <!-- App logo -->
-        <img id="app-logo" src="" alt="app-logo">
-        <!-- Top heading of app -->
-        <h1 id="app-heading">Text Search</h1>
-        <!-- Subheading of app -->
-        <h3 id="app-subheading">A cross-platform on-click dictionary.</h3>
+        <!-- Application's info -->
+        <div class="app-info">
+            <!-- App logo -->
+            <img id="app-logo" src="./assets/images/App-Icon.png" alt="app-logo">
+            <!-- Top heading of app -->
+            <h1 id="app-heading">Text Search</h1>
+            <!-- Subheading of app -->
+            <h3 id="app-subheading">A cross-platform on-click dictionary.</h3>
+        </div>
 
-        <!-- Form to search for word -->
-        <form id="search-form" action="">
+        <!-- Search box for searching of word -->
+        <div class="search-box">
             <!-- Word Search input element -->
-            <input type="text" name="search-box" id="word-search" placeholder="Type a word">
+            <input type="text" name="word" id="word-search" placeholder="Type a word">
 
             <!-- Search button -->
-            <input type="button" value="Search" id="submit-button">
-        </form>
+            <input type="button" value="Search" id="search-button">
+        </div>
     </main>
 
     <!-- Container for output results -->
