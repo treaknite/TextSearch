@@ -1,4 +1,56 @@
-/* Background color*/
+/* Universal CSS rules */
+* {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CSS Rules for body element */
 body {
-    background-color: #94d8a3ab;
+    background-color: #22577A;
+}
+
+
+.search-box {
+    position: relative;
+    background: #57CC99;
+    height: 20px;
+    width: 60%;
+    border-radius: 40px; 
+    margin: auto;
+    padding: 10px;
+}
+
+#word-search {
+    color: black;
+}
+
+#search-button {
+    color: black;
+}
+
+/* CSS rules for outermost result container */
+#result-container {
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+}
+
+/* CSS rules for inner container for phonetics section */
+#word-phonetics-container {
+    border-style: solid;
+    border-width: 2px;
+    border-color: grey;
+}
+
+/* CSS rules for inner container for meanings section */
+#meaning-container {
+    border-style: solid;
+    border-width: 2px;
+    border-color: grey;
+}
+
+/* CSS rules for application logo in main element */
+#app-logo {
+    width: 9%;
+    height: 9%;
 }
