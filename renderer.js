@@ -38,5 +38,11 @@ async function getData(seachedWord) {
     // Extracting and storing JSON data from response
     const jsonData = await response.json();
 
-    console.log(jsonData);
+    console.log(jsonData[0]);
+    // Calling method to display data
+    document.getElementById("searched-word").innerHTML = seachedWord ;
+    document.getElementById("phonetics-text").innerHTML = jsonData[0].phonetics[0].text;
+    document.getElementById("phonetics-audio").src = 'https:' + jsonData[0].phonetics[0].audio;
+    document.getElementById("meaning-container1").innerHTML = jsonData[0].meanings[0].definitions[0].definition;
+    document.getElementById("meaning-container2").innerHTML = jsonData[0].meanings[1].definitions[0].definition;
 }
