@@ -28,7 +28,7 @@ wordSearchBtn.addEventListener("click", function(event) {
     getData(searchedWord);
 })
 
-async function getData(seachedWord) {
+async function getData(searchedWord) {
     // AJAX calling
 
     // Adding word in base URL to make request complete
@@ -40,9 +40,10 @@ async function getData(seachedWord) {
 
     console.log(jsonData[0]);
     // Calling method to display data
-    document.getElementById("searched-word").innerHTML = seachedWord ;
+    document.getElementById("searched-word").innerHTML = searchedWord ;
     document.getElementById("phonetics-text").innerHTML = jsonData[0].phonetics[0].text;
+    document.getElementById("origin-of-word").innerHTML = "origin: " + jsonData[0].origin;
     document.getElementById("phonetics-audio").src = 'https:' + jsonData[0].phonetics[0].audio;
-    document.getElementById("meaning-container1").innerHTML = jsonData[0].meanings[0].definitions[0].definition;
-    document.getElementById("meaning-container2").innerHTML = jsonData[0].meanings[1].definitions[0].definition;
+    document.getElementById("meaning-container1").innerHTML = "1. " + jsonData[0].meanings[0].definitions[0].definition;
+    document.getElementById("meaning-container2").innerHTML = "2. " + jsonData[0].meanings[1].definitions[0].definition;
 }
