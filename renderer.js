@@ -65,7 +65,6 @@ async function getSynonyms(jsonData) {
         var child = document.createElement("p");
         child.innerText = jsonData[0].meanings[0].definitions[0].synonyms.slice(0,3).join(", ");
         parent.appendChild(child);
-        //document.getElementById("synonyms-parts-of-speech").innerHTML = jsonData[0].meanings[0].definitions[0].synonyms.slice(0,3).join(", ");
     }
     else {
         document.getElementById("synonyms-parts-of-speech").innerHTML = "No synonyms found";
