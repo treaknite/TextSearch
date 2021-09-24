@@ -60,33 +60,41 @@ async function getMeaning(jsonData) {
 
 async function getSynonyms(jsonData) {
     if (jsonData[0].meanings[0].definitions[0].synonyms.length > 0) {
-        const synonymsHeading = document.createElement("synonyms-heading");
-        synonymsHeading.innerHTML = "Synonyms";
-        document.getElementById("synonyms-parts-of-speech").appendChild(synonymsHeading);
-        document.getElementById("synonyms-parts-of-speech").innerHTML = jsonData[0].meanings[0].definitions[0].synonyms.slice(0,3).join(", ");
-
+        document.getElementById("synonyms-parts-of-speech").innerText = "Synonyms";
+        var parent = document.getElementById("synonyms-parts-of-speech");
+        var child = document.createElement("p");
+        child.innerText = jsonData[0].meanings[0].definitions[0].synonyms.slice(0,3).join(", ");
+        parent.appendChild(child);
+        //document.getElementById("synonyms-parts-of-speech").innerHTML = jsonData[0].meanings[0].definitions[0].synonyms.slice(0,3).join(", ");
+    }
+    else {
+        document.getElementById("synonyms-parts-of-speech").innerHTML = "No synonyms found";
     }
 }
 
 async function getAntonyms(jsonData) {
     if (jsonData[0].meanings[0].definitions[0].antonyms.length > 0) {
-        const antonymsHeading = document.createElement("antonyms-heading");
-        antonymsHeading.innerHTML = "Antonyms";
-        document.getElementById("antonyms-parts-of-speech").appendChild(antonymsHeading);
-        document.getElementById("antonyms-parts-of-speech").innerHTML = jsonData[0].meanings[0].definitions[0].antonyms.slice(0,3).join(", ");
-
+        document.getElementById("antonyms-parts-of-speech").innerText = "Antonyms";
+        var parent = document.getElementById("antonyms-parts-of-speech");
+        var child = document.createElement("p");
+        child.innerText = jsonData[0].meanings[0].definitions[0].antonyms.slice(0,3).join(", ");
+        parent.appendChild(child);
+    }
+    else{
+        document.getElementById("antonyms-parts-of-speech").innerText = "No antonyms found";
     }
 }
 
 async function getExamples(jsonData) {
     if (jsonData[0].meanings[0].definitions[0].example || jsonData[0].meanings[0].definitions[1].example !== " ") {
-        const examplesHeading = document.createElement("examples-heading");
-        examplesHeading.innerHTML = "Examples";
-        document.getElementById("example-parts-of-speech").appendChild(examplesHeading);
-        document.getElementById("example-parts-of-speech").innerHTML = jsonData[0].meanings[0].definitions[0].example;
-
+        document.getElementById("example-parts-of-speech").innerText = "Examples";
+        var parent = document.getElementById("example-parts-of-speech");
+        var child = document.createElement("p");
+        child.innerText = jsonData[0].meanings[0].definitions[0].example;
+        parent.appendChild(child);
+        console.log(jsonData[0].meanings[0].definitions[0].example);
     }
     else {
-        document.getElementById("examples-parts-of-speech").innerHTML = "No examples found";
+        document.getElementById("example-parts-of-speech").innerText = "No examples found";
     }
 }
