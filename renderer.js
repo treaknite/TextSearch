@@ -67,6 +67,7 @@ async function getSynonyms(jsonData) {
         parent.appendChild(child);
     }
     else {
+        document.getElementById("synonyms-parts-of-speech").innerText = "Synonyms"
         document.getElementById("synonyms-parts-of-speech").innerHTML = "No synonyms found";
     }
 }
@@ -80,6 +81,7 @@ async function getAntonyms(jsonData) {
         parent.appendChild(child);
     }
     else{
+        document.getElementById("antonyms-parts-of-speech").innerText = "Antonyms"
         document.getElementById("antonyms-parts-of-speech").innerText = "No antonyms found";
     }
 }
@@ -94,6 +96,7 @@ async function getExamples(jsonData) {
         console.log(jsonData[0].meanings[0].definitions[0].example);
     }
     else {
+        document.getElementById("example-parts-of-speech").innerText = "Examples";
         document.getElementById("example-parts-of-speech").innerText = "No examples found";
     }
 }
