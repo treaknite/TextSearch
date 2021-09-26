@@ -48,9 +48,9 @@ async function getData(searchedWord) {
 
 async function getMeaning(jsonData) {
     // Calling method to display meaning,origin and phonetics
-    document.getElementById("searched-word").innerHTML = searchedWord;
-    document.getElementById("phonetics-text").innerHTML = jsonData[0].phonetics[0].text;
-    document.getElementById("origin-of-word").innerHTML = "origin: " + jsonData[0].origin;
+    document.getElementById("searched-word").innerText= searchedWord;
+    document.getElementById("phonetics-text").innerText = jsonData[0].phonetics[0].text;
+    document.getElementById("origin-of-word").innerText = "origin: " + jsonData[0].origin;
     document.getElementById("phonetics-audio").src = 'https:' + jsonData[0].phonetics[0].audio;
 
     document.getElementById("meaning-subcontainer1").innerHTML = "1. " + jsonData[0].meanings[0].definitions[0].definition;
