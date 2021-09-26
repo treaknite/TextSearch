@@ -59,36 +59,46 @@ async function getMeaning(jsonData) {
 }
 
 async function getSynonyms(jsonData) {
+
+    document.getElementById("synonyms-parts-of-speech").innerText = "Synonyms"
+
     if (jsonData[0].meanings[0].definitions[0].synonyms.length > 0) {
-        document.getElementById("synonyms-parts-of-speech").innerText = "Synonyms";
         var parent = document.getElementById("synonyms-parts-of-speech");
         var child = document.createElement("p");
         child.innerText = jsonData[0].meanings[0].definitions[0].synonyms.slice(0,3).join(", ");
         parent.appendChild(child);
     }
     else {
-        document.getElementById("synonyms-parts-of-speech").innerText = "Synonyms"
-        document.getElementById("synonyms-parts-of-speech").innerHTML = "No synonyms found";
+        var parent = document.getElementById("synonyms-parts-of-speech");
+        var child = document.createElement("p");
+        child.innerText = "No synonyms found";
+        parent.appendChild(child);
     }
 }
 
 async function getAntonyms(jsonData) {
+
+    document.getElementById("antonyms-parts-of-speech").innerText = "Antonyms";
+
     if (jsonData[0].meanings[0].definitions[0].antonyms.length > 0) {
-        document.getElementById("antonyms-parts-of-speech").innerText = "Antonyms";
         var parent = document.getElementById("antonyms-parts-of-speech");
         var child = document.createElement("p");
         child.innerText = jsonData[0].meanings[0].definitions[0].antonyms.slice(0,3).join(", ");
         parent.appendChild(child);
     }
     else{
-        document.getElementById("antonyms-parts-of-speech").innerText = "Antonyms"
-        document.getElementById("antonyms-parts-of-speech").innerText = "No antonyms found";
+        var parent = document.getElementById("antonyms-parts-of-speech");
+        var child = document.createElement("p");
+        child.innerText = "No antonyms found";
+        parent.appendChild(child);
     }
 }
 
 async function getExamples(jsonData) {
+
+    document.getElementById("example-parts-of-speech").innerText = "Examples";
+
     if (jsonData[0].meanings[0].definitions[0].example || jsonData[0].meanings[0].definitions[1].example !== " ") {
-        document.getElementById("example-parts-of-speech").innerText = "Examples";
         var parent = document.getElementById("example-parts-of-speech");
         var child = document.createElement("p");
         child.innerText = jsonData[0].meanings[0].definitions[0].example;
@@ -96,7 +106,9 @@ async function getExamples(jsonData) {
         console.log(jsonData[0].meanings[0].definitions[0].example);
     }
     else {
-        document.getElementById("example-parts-of-speech").innerText = "Examples";
-        document.getElementById("example-parts-of-speech").innerText = "No examples found";
+        var parent = document.getElementById("example-parts-of-speech");
+        var child = document.createElement("p");
+        child.innerText = "No examples found";
+        parent.appendChild(child);
     }
 }
