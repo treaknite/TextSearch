@@ -48,7 +48,7 @@
             <input type="button" value="Search" id="search-button">
         </div>
     </main>
-
+    <br>
     <!-- Container for output results -->
     <div id="result-container">
         <!-- Container for word and their phonetics -->
@@ -56,13 +56,13 @@
 
             <!-- Name of searched word -->
             <h3 id="searched-word"></h3>
+             <!-- Audio of phonetics -->
+             <audio controls id="phonetics-audio" src=""></audio>
             
             <!-- Elements for word's phonetics -->
             <div id="phonetics-of-word">
                 <!-- Elements for phonetics -->
                 <span id="phonetics-text"></span>
-                <!-- Audio of phonetics -->
-                <audio id="phonetics-audio" src=""></audio>
             </div>
 
             <!-- Origin of word -->
@@ -71,6 +71,15 @@
 
         <!-- Container for meanings and parts-of-speech of word -->
         <div id="meaning-container">
+            <h4>Meaning</h4>
+            <div id="meaning-subcontainer1">
+
+            </div>
+
+            <div id="meaning-subcontainer2">
+
+            </div>
+
             <!-- Parts-of-speech of word -->
             <div id="parts-of-speech">
                 <!-- Name of parts-of-speech -->
