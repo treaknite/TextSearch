@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
     <!-- Meta elements -->
     <meta charset="UTF-8">
-    
+
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title of app -->
@@ -23,88 +24,137 @@
     <meta name="msapplication-TileColor" content="#22577a">
     <meta name="theme-color" content="#ffffff">
 
+    <!-------------------------css bootstrap cdn------------------------>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!---------------------------css stylesheet------------------------------->
+    <link rel="stylesheet" href="bootstrap-dist/css/style.css">
+    <link rel="icon" href="images/icon.jpg" />
+
+    <!------------fontawesome cdn----------------->
+    <script src="https://kit.fontawesome.com/61024fa0a4.js" crossorigin="anonymous"></script>
+
+
+    <!------------------jquery/js bootstrap cdn---------------------->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
     <!-- Stlyesheet link -->
     <link rel="stylesheet" href="./styles.css">
+
 </head>
+
 <body>
-    <!-- Main element of app -->
-    <main id="main-section">
-        <!-- Application's info -->
-        <div class="app-info">
-            <!-- App logo -->
-            <img id="app-logo" src="./assets/images/App-Icon.png" alt="app-logo">
-            <!-- Top heading of app -->
-            <h1 id="app-heading">Text Search</h1>
-            <!-- Subheading of app -->
-            <h3 id="app-subheading">A cross-platform on-click dictionary.</h3>
-        </div>
+    <div class="container background">
+        <span class="cube"></span>
+        <span class="cube"></span>
+        <span class="cube"></span>
+        <span class="cube"></span>
 
-        <!-- Search box for searching of word -->
-        <div class="search-box">
-            <!-- Word Search input element -->
-            <input type="text" name="word" id="word-search" placeholder="Type a word">
-
-            <!-- Search button -->
-            <input type="button" value="Search" id="search-button">
-        </div>
-    </main>
-    <br>
-    <!-- Container for output results -->
-    <div id="result-container">
-        <!-- Container for word and their phonetics -->
-        <div id="word-phonetics-container">
-
-            <!-- Name of searched word -->
-            <h3 id="searched-word"></h3>
-             <!-- Audio of phonetics -->
-             <audio controls id="phonetics-audio" src=""></audio>
-            
-            <!-- Elements for word's phonetics -->
-            <div id="phonetics-of-word">
-                <!-- Elements for phonetics -->
-                <span id="phonetics-text"></span>
+        <span class="cube"></span>
+        <span class="cube"></span>
+        <span class="cube"></span>
+        <span class="cube"></span>
+        <!-- Main element of app -->
+        <main id="main-section">
+            <!-- Application's info -->
+            <div class="app-info">
+                <!-- App logo -->
+                <div class="small-box">
+                    <!-- <img id="app-logo" src="./assets/images/App-Icon.png" alt="app-logo"> -->
+                    <!-- Top heading of app -->
+                    <i class="fa-solid fa-magnifying-glass logo"></i>
+                    <h2 id="app-heading"><i class="fa-solid fa-magnifying-glass logo"></i>Text Search</h2>
+                </div>
+                <!-- Subheading of app -->
+                <!-- Image and text -->
+                <h3 id="app-subheading">A cross-platform on-click dictionary</h3>
             </div>
+        </main>
 
-            <!-- Origin of word -->
-            <p id="origin-of-word"></p>
-        </div>
+        <div class="med-box">
+            <!-- Search box for searching of word -->
+            <div class="search-box form-inline my-2 my-lg-0">
+                <!-- Word Search input element -->
+                <input class="form-control mr-sm-2" type="text" name="word" id="word-search" placeholder="Type a word">
 
-        <!-- Container for meanings and parts-of-speech of word -->
-        <div id="meaning-container">
-            <h4>Meaning</h4>
-            <div id="meaning-subcontainer1">
-
-            </div>
-
-            <div id="meaning-subcontainer2">
-
-            </div>
-
-            <!-- Parts-of-speech of word -->
-            <div id="parts-of-speech">
-                <!-- Name of parts-of-speech -->
-                <span id="name-parts-of-speech"></span>
-                
-                <!-- Section for multiple definition in parts-of-speech -->
-                <!-- As each parts-of-speech can have multiple definitions, examples, synonyms, antonyms -->
-                <div id="definitions-section">
-                    <!-- Definition of word in part-of-speech -->
-                    <p id="definition-parts-of-speech"></p>
-                    <!-- Example of word in parts-of-speech -->
-                    <p id="example-parts-of-speech"></p>
-                    <!-- Synonyms of word in parts-of-speech -->
-                    <p id="synonyms-parts-of-speech"></p>
-                    <!-- Antonyms of word in parts-of-speech -->
-                    <p id="antonyms-parts-of-speech"></p>
+                <!-- Search button -->
+                <div class="search-btn-box">
+                    <input class="btn btn-outline-success my-2 my-sm-0" type="button" value="Search" id="search-button">
                 </div>
             </div>
-    
         </div>
 
+        <br>
+        <!-- Container for output results -->
+        <div class="container-box">
+            <div id="result-container">
+                <!-- Container for word and their phonetics -->
+                <div id="word-phonetics-container" class="container-word-phonetics">
+
+                    <!-- Name of searched word -->
+                    <h3 id="searched-word"></h3>
+                    <!-- Audio of phonetics -->
+                    <audio controls id="phonetics-audio" src=""></audio>
+
+                    <!-- Elements for word's phonetics -->
+                    <div id="phonetics-of-word">
+                        <!-- Elements for phonetics -->
+                        <span id="phonetics-text"></span>
+                    </div>
+
+                    <!-- Origin of word -->
+                    <p id="origin-of-word"></p>
+                </div>
+
+                <!-- Container for meanings and parts-of-speech of word -->
+                <div id="meaning-container">
+                    <h4>Meaning</h4>
+                    <div id="meaning-subcontainer1">
+
+                    </div>
+
+                    <div id="meaning-subcontainer2">
+
+                    </div>
+
+                    <!-- Parts-of-speech of word -->
+                    <div id="parts-of-speech">
+                        <!-- Name of parts-of-speech -->
+                        <span id="name-parts-of-speech"></span>
+
+                        <!-- Section for multiple definition in parts-of-speech -->
+                        <!-- As each parts-of-speech can have multiple definitions, examples, synonyms, antonyms -->
+                        <div id="definitions-section">
+                            <!-- Definition of word in part-of-speech -->
+                            <p id="definition-parts-of-speech"></p>
+                            <!-- Example of word in parts-of-speech -->
+                            <p id="example-parts-of-speech"></p>
+                            <!-- Synonyms of word in parts-of-speech -->
+                            <p id="synonyms-parts-of-speech"></p>
+                            <!-- Antonyms of word in parts-of-speech -->
+                            <p id="antonyms-parts-of-speech"></p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
     </div>
 
 
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
+
 </body>
+
 </html>
