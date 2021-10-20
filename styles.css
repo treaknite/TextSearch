@@ -1,11 +1,16 @@
+/* added font  */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@600&display=swap');
+
+
 /* Universal CSS rules */
 * {
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 /* CSS Rules for body element */
 body {
+    background-color: #EEAFBF;                          /* changed */
     background-color: black;
 }
 
@@ -34,6 +39,15 @@ body {
 }
 .search-box {
     position: relative;
+    background: #AFE9F3;                                /* changed */
+    height: 20px;
+    width: 60%;
+    border-radius: 40px; 
+    margin: auto;
+    margin-bottom: 50px;                                  /* changed */
+    margin-top: 50px;
+    padding: 16px;                                        /* changed */
+    padding-left: 25px;                                   /* changed */
     background: #25292c;
     height: 59px;
     width: 400px;
@@ -81,13 +95,18 @@ body {
 /* CSS rules for outermost result container */
 #result-container {
     border-style: solid;
-    border-width: 5px;
+    border-width: 3.5px;                                   /* changed */
     border-color: black;
+    border-radius: 15px;                                   /* added */
 }
 
 /* CSS rules for inner container for phonetics section */
 #word-phonetics-container {
     border-style: solid;
+    border-width: 1px;                                     /* changed */
+    border-color: grey;
+    padding-left: 8px;                                     /* added */
+    border-radius: 10px;                                   /* added */
     border-width: 2px;
     border-color: rgb(123, 192, 192);
     text-align: center;
@@ -98,6 +117,10 @@ body {
 /* CSS rules for inner container for meanings section */
 #meaning-container {
     border-style: solid;
+    border-width: 1px;                                      /* changed */
+    border-color: gray;
+    padding-left: 8px;                                      /* added */
+    border-radius: 10px;                                    /* added */
     border-width: 2px;
     border-color: rgb(123, 192, 192);
     text-align: center;
@@ -110,6 +133,24 @@ body {
 #app-logo {
     width: 9%;
     height: 9%;
+}
+
+/* Added a extra  CSS content */
+
+#app-heading{
+    color: black;
+    font-family: 'Noto Sans Mono', monospace;
+}
+#app-subheading {
+    color: black;
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+#meaning {
+    color: black;
+}
+
+=======
     margin-top: 5px;
 }
 #phonetics-audio {
