@@ -11,9 +11,32 @@
 /* CSS Rules for body element */
 body {
     background-color: #EEAFBF;                          /* changed */
+    background-color: black;
 }
 
-
+/* containers */
+.container{
+    padding:7% 13%;
+    background: rgba(0,0,0,0.8);
+}
+  
+ @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .container {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+  }
+.container-box{
+    padding:10% 13%;
+}
+.small-box {
+    text-align: center;
+    display: inline-flex;
+    margin-left: 37%;
+}
+.med-box{
+    padding:20% 0 7% 0;
+}
 .search-box {
     position: relative;
     background: #AFE9F3;                                /* changed */
@@ -25,14 +48,48 @@ body {
     margin-top: 50px;
     padding: 16px;                                        /* changed */
     padding-left: 25px;                                   /* changed */
+    background: #25292c;
+    height: 59px;
+    width: 400px;
+    border-radius: 14px;
+    /* margin: auto; */
+    padding: 10;
+    /* display: inline; */
+    margin-left: 24%;
+    border: rgb(158, 192, 192) solid 5px;
+    box-shadow:0px 0px  10px cyan,
+      0px 0px  40px cyan,
+    0px 0px  80px purple,
+    0px 0px  120px cyan,
+    0px 0px  200px cyan;
+}
+.container-word-phonetics{
+    padding: 3% 0 2% 0;
+}
+.search-btn-box {
+    bottom: 8px;
+    height: 80px;
+    width: 80px;
+    padding: 5% 0% 0% 39%;
 }
 
+/*search-box input-fields*/
 #word-search {
-    color: black;
-}
+    color: cyan;
+    background: #25292c;
+    width: 100%;
+    height: 100%;
+    border: none;
+    text-align: center;  
+} 
 
 #search-button {
-    color: black;
+    color: #fff;
+    background-color: transparent;
+    height: 37px;
+    width: 83px;
+    border-radius: 5px;
+    border: rgb(123, 192, 192) solid 2px;
 }
 
 /* CSS rules for outermost result container */
@@ -50,6 +107,11 @@ body {
     border-color: grey;
     padding-left: 8px;                                     /* added */
     border-radius: 10px;                                   /* added */
+    border-width: 2px;
+    border-color: rgb(123, 192, 192);
+    text-align: center;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 }
 
 /* CSS rules for inner container for meanings section */
@@ -59,6 +121,12 @@ body {
     border-color: gray;
     padding-left: 8px;                                      /* added */
     border-radius: 10px;                                    /* added */
+    border-width: 2px;
+    border-color: rgb(123, 192, 192);
+    text-align: center;
+    padding: 2% 2% 0 2%;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
 }
 
 /* CSS rules for application logo in main element */
@@ -82,3 +150,151 @@ body {
     color: black;
 }
 
+=======
+    margin-top: 5px;
+}
+#phonetics-audio {
+    margin: 16px 130px;
+}
+
+/* background-animation */
+.background{
+    width:100%;
+    height:100%
+  }
+  
+  .background span.cube{
+    position: absolute;
+    width:50px;
+    height:50px;
+    background:purple ;
+    box-shadow:0px 0px  10px purple,
+      0px 0px  40px purple,
+    0px 0px  80px purple,
+    0px 0px  120px purple,
+    0px 0px  200px purple;
+    border-radius:30%;
+    outline:none;
+    
+  }
+  .background span.cube:nth-child(n+1){
+    background:transparent;
+    border:5px solid cyan;
+    animation:animate2 5s linear infinite ;
+    
+  }
+  @keyframes animate2{
+    100%{border:5px solid purple;
+    background:purple}
+  }
+  .background span.cube:nth-child(1){
+    top:100%;
+    left:20%;
+    animation:animate 10s linear infinite ;
+  }
+  
+  .background span.cube:nth-child(2){
+    top:100%;
+    left:60%;
+    animation:animate 18s linear infinite ;
+  }
+  
+  .background span.cube:nth-child(3){
+    top:100%;
+    left:80%;
+    animation:animate 25s linear infinite ;
+  }
+  
+  .background span.cube:nth-child(4){
+    top:100%;
+    left:40%;
+    animation:animate 14s linear infinite ;
+  }
+  
+  .background span.cube:nth-child(5){
+    top:100%;
+    left:30%;
+    animation:animate 17s linear infinite ;
+  }
+  
+  .background span.cube:nth-child(6){
+    top:100%;
+    left:60%;
+    animation:animate 6s linear infinite ;
+  }
+  
+  .background span.cube:nth-child(7){
+    top:65%;
+    left:25%;
+    animation:animate 14s linear infinite ;
+  }
+  
+  .background span.cube:nth-child(8){
+    top:90%;
+    left:77%;
+    animation:animate 14s linear infinite ;
+  }
+  @keyframes animate{
+    0%{
+      transform:scale(0);
+      opacity: 1;
+        
+    }
+    50%{transform:rotateZ(180) translateX(-50px);opacity: 0.8;}
+    100%{
+      transform:scale(1) translateY(-500px) rotateZ(360deg) translateX(80px);
+      z-index:1000;
+      opacity: 0.3;
+      
+    }
+  }
+  
+  h2{
+    color:white;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+    font-family:arial;
+    text-transform:uppercase;
+    margin-left: -38%;
+    position:static;
+    font-size:5em;
+    text-shadow:0px 0px  10px cyan,
+      0px 0px  40px cyan,
+    0px 0px  80px purple,
+    0px 0px  120px cyan,
+    0px 0px  200px cyan;
+  }
+
+ h3{
+    color:white;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+    font-family:arial;
+    text-transform:uppercase;
+    margin-left: 0;
+    position:static;
+    font-size:1.5em;
+    text-shadow:0px 0px  10px cyan,
+      0px 0px  40px cyan,
+    0px 0px  80px purple,
+    0px 0px  120px cyan,
+    0px 0px  200px cyan;
+  }
+  h4{
+    color:white;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+    font-family:arial;
+    text-transform:uppercase;
+    margin-left: 0;
+    position:static;
+    font-size:1.2em;
+    text-shadow:0px 0px  10px cyan,
+      0px 0px  40px cyan,
+    0px 0px  80px purple,
+    0px 0px  120px cyan,
+    0px 0px  200px cyan;
+  }
