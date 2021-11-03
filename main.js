@@ -7,6 +7,7 @@ function createWindow () {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+    icon: path.join(__dirname, 'assets/icons/png/64x64.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
@@ -15,6 +16,7 @@ function createWindow () {
   // and load the index.html of the app.
   win.loadFile('index.html')
 }
+
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
@@ -30,6 +32,14 @@ app.whenReady().then(() => {
     }
   })
 })
+
+// Creation of global shortcut 'Alt + Control + T'
+app.whenReady().then(() => {
+  globalShortcut.register('Alt+CommandOrControl+T', () => {
+    console.log('Electron loves global shortcuts!')
+  })
+}).then(createWindow)
+
 
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
