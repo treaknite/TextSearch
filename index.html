@@ -5,11 +5,6 @@
 
     <!-- Meta elements -->
     <meta charset="UTF-8">
-
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title of app -->
@@ -27,11 +22,8 @@
     <!-------------------------css bootstrap cdn------------------------>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!---------------------------css stylesheet------------------------------->
-    <link rel="stylesheet" href="bootstrap-dist/css/style.css">
-    <link rel="icon" href="images/icon.jpg" />
 
-    <!-- Stlyesheet link -->
+    <!-- Local Stlyesheet link -->
     <link rel="stylesheet" href="./styles.css">
 
 </head>
@@ -42,24 +34,21 @@
         <span class="cube"></span>
         <span class="cube"></span>
         <span class="cube"></span>
+        <span class="cube"></span>
+        <span class="cube"></span>
+        <span class="cube"></span>
+        <span class="cube"></span>
 
-        <span class="cube"></span>
-        <span class="cube"></span>
-        <span class="cube"></span>
-        <span class="cube"></span>
         <!-- Main element of app -->
         <main id="main-section">
             <!-- Application's info -->
             <div class="app-info">
                 <!-- App logo -->
                 <div class="small-box">
-                    <!-- <img id="app-logo" src="./assets/images/App-Icon.png" alt="app-logo"> -->
                     <!-- Top heading of app -->
-                    <i class="fa-solid fa-magnifying-glass logo"></i>
                     <h2 id="app-heading"><i class="fa-solid fa-magnifying-glass logo"></i>Text Search</h2>
                 </div>
                 <!-- Subheading of app -->
-                <!-- Image and text -->
                 <h3 id="app-subheading">A cross-platform on-click dictionary</h3>
             </div>
         </main>
@@ -78,6 +67,7 @@
         </div>
 
         <br>
+
         <!-- Container for output results -->
         <div class="container-box">
             <div id="result-container">
@@ -86,6 +76,7 @@
 
                     <!-- Name of searched word -->
                     <h3 id="searched-word"></h3>
+
                     <!-- Audio of phonetics -->
                     <audio controls id="phonetics-audio" src=""></audio>
 
@@ -102,16 +93,14 @@
                 <!-- Container for meanings and parts-of-speech of word -->
                 <div id="meaning-container">
                     <h4>Meaning</h4>
-                    <div id="meaning-subcontainer1">
 
-                    </div>
+                    <div id="meaning-subcontainer1"></div>
 
-                    <div id="meaning-subcontainer2">
-
-                    </div>
+                    <div id="meaning-subcontainer2"></div>
 
                     <!-- Parts-of-speech of word -->
                     <div id="parts-of-speech">
+
                         <!-- Name of parts-of-speech -->
                         <span id="name-parts-of-speech"></span>
 
@@ -128,9 +117,7 @@
                             <p id="antonyms-parts-of-speech"></p>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
@@ -152,5 +139,4 @@
     <script src="https://kit.fontawesome.com/61024fa0a4.js" crossorigin="anonymous"></script>
 
 </body>
-
 </html>
