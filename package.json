@@ -8,6 +8,10 @@
     "start": "electron ."
   },
   "devDependencies": {
-    "electron": "^14.0.1"
+    "electron": "^14.0.1",
+    "electron-packager": "^15.4.0"
+  },
+  "dependencies": {
+    "electron-selected-text": "^1.1.2"
   }
 }
