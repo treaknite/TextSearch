@@ -12,6 +12,7 @@
     "electron-packager": "^15.4.0"
   },
   "dependencies": {
+    "clipboardy": "^3.0.0",
     "electron-selected-text": "^1.1.2"
   }
 }

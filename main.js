@@ -49,12 +49,15 @@ function createWindow () {
   })
 }
 
+function shortcutPressed() {
+  let clipboardStr = clipboard.readText()
+  console.log(clipboardStr)
+}
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
-  createWindow()
 
   const ret = globalShortcut.register('CommandOrControl+T', () => {
     console.log('CommandOrControl+T is pressed');
@@ -62,16 +65,11 @@ app.whenReady().then(() => {
 
   if (!ret) {
     console.log('Shortcut registration failed')
-  } else {
-    // Check whether a shortcut is registered.
-    console.log(globalShortcut.isRegistered('CommandOrControl+T'))
-    clipboardText = clipboard.readText([String])
-    /* Code to send server call... */
-    console.log(clipboardText)
-  }
+  } 
 
-  
-
+  // Check whether a shortcut is registered.
+  console.log(globalShortcut.isRegistered('CommandOrControl+T'))
+  createWindow()
   app.on('activate', () => {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
@@ -79,6 +77,21 @@ app.whenReady().then(() => {
       createWindow()
     }
   })
+})
+
+app.on('ready', () => {
+  globalShortcut.register('CommandOrControl+T', () => {
+    console.log('CommandOrControl+T is pressed')
+    shortcutPressed()
+  })
+})
+
+app.on('will-quit', () => {
+  // Unregister a shortcut.
+  globalShortcut.unregister('CommandOrControl+T')
+
+  // Unregister all shortcuts.
+  globalShortcut.unregisterAll()
 })
 
 
